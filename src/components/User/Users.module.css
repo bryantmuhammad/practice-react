@@ -1,0 +1,10 @@
+.users {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 15px 0;
+}
+
+.users__list {
+font-weight: bold;
+font-size: 20px;
+} 
