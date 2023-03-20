@@ -2,16 +2,14 @@
     width: 80%;
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 15px;
 }
 
 @media only screen and (min-width: 768px) {
     .card {
         width: 50%;
-        
     }
-    
 }
 
 

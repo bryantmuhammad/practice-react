@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import UserList from "./components/User/UserList";
-import { useState } from "react";
+import { useState, Fragment } from "react";
+import Modal from "./components/Modal/Modal";
+import UserForm from "./components/User/UserForm";
 
 const listUser = [
   {
@@ -33,12 +35,30 @@ const listUser = [
 
 function App() {
   const [users, setUser] = useState(listUser);
+  const [showModal, setShowModal] = useState(false);
+
+  const modalHandler = () => {
+    setShowModal(showModal ? false : true);
+  };
 
   return (
-    <div>
+    <Fragment>
+      {showModal && (
+        <Modal
+          onModalClick={modalHandler}
+          title="Validation Error"
+          body="Please enter a valid name"
+        />
+      )}
+      {/* <button onClick={modalHandler}>open modal</button> */}
+
+      <UserForm />
       <UserList users={users} />
-    </div>
+    </Fragment>
   );
+}
+{
+  /*  */
 }
 
 export default App;
